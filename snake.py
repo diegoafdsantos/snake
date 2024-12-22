@@ -51,9 +51,10 @@ while True:
         trail[0][1] = 0
 
     if trail[0] == applePos:
-        applePos = [0]
+        applePos = []
         while applePos == []:
-            applePos in trail:
+            applePos = [random.randint(0, 7), random.randint(0, 7)]    
+            if applePos in trail:
                 applePos = []
         lenght += 1
     elif trail[0] in trail [1:]:
@@ -66,7 +67,14 @@ while True:
         pixels[pos[1] * 8 + pos[0]] = white
     pixels[applePos[1] * 8 + applePos[0]] = red
     sense.set_pixels(pixels)
-    time.sleep(0.15)
+    time.sleep(0.30)
+    
+
+
+
+
+
+
     
 
 
